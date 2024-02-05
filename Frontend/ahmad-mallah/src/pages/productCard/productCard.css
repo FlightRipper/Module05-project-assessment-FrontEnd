@@ -1,0 +1,305 @@
+.admin-product-container {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 1400px) {
+    .admin-product-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 1200px) {
+    .admin-product-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 800px) {
+    .admin-product-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.imgupdate{
+    height: 360px;
+    width: 500px;
+    margin-bottom: 5%;
+}
+
+.card {
+    transition: .4s;
+    z-index: 0;
+    margin: 20px;
+}
+
+.card__Desc::-webkit-scrollbar {
+    display: none;
+}
+
+.card:hover {
+    transform: scale(1.02);
+    z-index: 1;
+}
+.card:hover {
+    transform: scale(1.10);
+    z-index: 1;
+}
+
+.card:hover .button-Update {
+    box-shadow: 0px 0px 10px 2px #4e58ca;
+}
+
+.card:hover .button-Delete {
+    box-shadow: 0px 0px 10px 2px #f90303;
+}
+
+.welcome{
+    font-size: 30px;
+    font-family: "Signika" !important;
+}
+
+.button-Update:hover ~ .card {
+    box-shadow: 0px 0px 10px 2px #4e58ca;
+}
+
+.button-Delete:hover ~ .card {
+    box-shadow: 0px 0px 10px 2px #f90303;
+}
+.card__img {
+    width: 248px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+  
+.card__descr-wrapper {
+    padding: 15px;
+    display: grid;
+
+}
+  
+.card__title, .card__Desc {
+    color: var(--font-color);
+    text-align: center;
+    margin-bottom: 15px;
+    font-weight: 900;
+    font-size: 16px;
+    max-width: 80;
+}
+
+.card__Desc{
+    overflow: scroll;
+    max-height: 50px;
+}
+
+.IMG-BUTTON{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20%;
+}
+
+  
+.card__descr {
+    color: var(--font-color);
+}
+  
+.card__buttons{
+    display:flex;
+    gap: 10%;
+    align-items: center;
+    justify-content: center;
+}
+  
+.button-Update {
+    --color: #4e58ca;
+
+    background-color: transparent;
+    border-radius: .3em;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .5s;
+
+    border: 1px solid;
+    font-family: "Signika" !important;
+    font-weight: bold !important;
+    text-transform: uppercase;
+    color: var(--color);
+    z-index: 1;
+    width: 50%;
+    height: 100%;
+}
+
+.admin-Main-Create {
+    --color: #078007;
+    background-color: transparent;
+    border-radius: .3em;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .5s;
+    border: 1px solid;
+    font-family: "Signika" !important;
+    font-weight: bold !important;
+    text-transform: uppercase;
+    color: var(--color);
+    z-index: 1;
+    width: 15%;
+    height: 40px;
+    margin-left: 42%;
+
+
+}
+
+.admin-product-search{
+    width: 30%;
+}
+
+
+
+   .container-create-search{
+display: flex;
+align-items: center;
+    margin-top: 2%;
+    gap: 50px;
+    
+   }
+
+
+.admin-Main-Create::before, .admin-Main-Create::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 50px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+    background-color: var(--color);
+    transition: 1s ease;
+}
+
+.admin-Main-Create::before {
+    top: -1em;
+    left: -1em;
+}
+
+.admin-Main-Create::after {
+    left: calc(100% + 1em);
+    top: calc(100% + 1em);
+}
+
+.admin-Main-Create:hover::before, .admin-Main-Create:hover::after {
+    height: 410px;
+    width: 410px;
+}
+
+.admin-Main-Create:hover {
+    color: rgb(253, 253, 253);
+}
+
+.admin-Main-Create:active {
+    filter: brightness(.8);
+}
+
+
+  
+.button-Update::before, .button-Update::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 50px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+    background-color: var(--color);
+    transition: 1s ease;
+}
+   
+.button-Update::before {
+    top: -1em;
+    left: -1em;
+}
+   
+.button-Update::after {
+    left: calc(100% + 1em);
+    top: calc(100% + 1em);
+}
+   
+.button-Update:hover::before, .button-Update:hover::after {
+    height: 410px;
+    width: 410px;
+}
+   
+.button-Update:hover {
+    color: rgb(253, 253, 253);
+}
+   
+
+
+
+.button-Delete {
+    --color: rgb(249, 1, 1);
+
+    background-color: transparent;
+    border-radius: .3em;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .5s;
+
+    border: 1px solid;
+    font-family: "Signika" !important;
+    font-weight: bold !important;
+    text-transform: uppercase;
+    color: var(--color);
+    z-index: 1;
+    width: 50%;
+    height: 100%;
+}
+  
+.button-Delete::before, .button-Delete::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 50px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+    background-color: var(--color);
+    transition: 1s ease;
+}
+   
+.button-Delete::before {
+    top: -1em;
+    left: -1em;
+}
+   
+.button-Delete::after {
+    left: calc(100% + 1em);
+    top: calc(100% + 1em);
+}
+   
+.button-Delete:hover::before, .button-Delete:hover::after {
+    height: 410px;
+    width: 410px;
+}
+   
+.button-Delete:hover {
+    color: rgb(253, 253, 253);
+}
+
+
+
+.SubmitButton{
+    margin-left: 40% !important;
+}
+  
+.SubmitButton:hover{
+    background-color: rgb(0, 83, 0) !important;
+}
